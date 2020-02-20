@@ -6,6 +6,7 @@
   "scripts": {
     "test": "istanbul cover _mocha",
     "start": "cross-env NODE_ENV=production pm2 start index.js --name 'myblog'",
+    "stop": "cross-env NODE_ENV=production pm2 stop index.js --name 'myblog'",
     "heroku": "NODE_ENV=production node index"
   },
   "author": "",
