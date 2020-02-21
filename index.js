@@ -42,7 +42,7 @@ app.use(require('express-formidable')({
 
 // 设置模板全局常量
 app.locals.blog = {
-  title: pkg.name,
+  title: "Luo's Blog",
   description: pkg.description
 }
 
@@ -98,8 +98,7 @@ if (module.parent) {
   module.exports = app
 } else {
   // 监听端口，启动程序
-  const port = process.env.PORT || config.port
-  app.listen(port, function () {
-    console.log(`${pkg.name} listening on port ${port}`)
+  app.listen(config.port, function () {
+    console.log(`${pkg.name} listening on port ${config.port}`)
   })
 }

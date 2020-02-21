@@ -1,7 +1,7 @@
 {
-  "name": "express-blog",
+  "name": "luo-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Qianhao Luo's Blog, by express",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover _mocha",

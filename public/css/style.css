@@ -12,7 +12,7 @@ a:hover {
 }
 
 .button {
-  background-color: #4fc08d !important;
+  background-color: #4fc08d;
   color: #fff !important;
 }
 
@@ -48,7 +48,7 @@ a:hover {
 
 .nav-setting .ui.dropdown.button {
   padding: 10px 10px 0 10px;
-  background-color: #fff !important;
+  background-color: #fff;
 }
 
 .nav-setting .icon.bars {
@@ -75,4 +75,37 @@ a:hover {
 
 .post-content .tag.right a {
   color: #999;
+}
+
+
+/* customized */
+body {
+  background-color: white;
+}
+
+.icon.bars {
+  margin: 0px !important;
+}
+
+.ui.dropdown.button {
+  margin: 0px;
+}
+
+
+i.icon {
+  margin: 0px;
+}
+
+.nav-setting .ui.dropdown.button {
+  padding: 7px;
+}
+
+#menu {
+  transition: .3s all ease-in-out !important;
+  background-color: #ecececd3;
+}
+
+#menu:hover {
+  box-shadow: 0 0 5px .05px #c9c9c9 !important;
+  background-color: white;
 }
