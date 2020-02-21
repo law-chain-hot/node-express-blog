@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const express = require('express')
 const router = express.Router()
 
@@ -57,7 +56,7 @@ router.post('/create', checkLogin, function (req, res, next) {
 })
 
 // GET /posts/create 发表文章页
-router.get('/create', checkLogin, function (req, res, next) {
+router.get('/create', checkLogin, function (req, res) {
   res.render('create')
 })
 
@@ -133,6 +132,7 @@ router.post('/:postId/edit', checkLogin, function (req, res, next) {
       if (post.author._id.toString() !== author.toString()) {
         throw new Error('没有权限')
       }
+
       PostModel.updatePostById(postId, { title: title, content: content })
         .then(function () {
           req.flash('success', '编辑文章成功')
@@ -147,6 +147,8 @@ router.post('/:postId/edit', checkLogin, function (req, res, next) {
 router.get('/:postId/remove', checkLogin, function (req, res, next) {
   const postId = req.params.postId
   const author = req.session.user._id
+  console.log(postId);
+
 
   PostModel.getRawPostById(postId)
     .then(function (post) {
@@ -167,4 +169,3 @@ router.get('/:postId/remove', checkLogin, function (req, res, next) {
 })
 
 module.exports = router
-
